@@ -1,9 +1,13 @@
-var altura = document.getElementById('altura').value;
-var peso = document.getElementById('peso').value;
-var imc = (peso / (altura^2));
+var altura = document.querySelector("#altura");
+var peso = document.querySelector('#peso');
 var resultado = document.getElementById('resultado');
 
 function contaimc(){
+    
+    var imc = (peso.value / (altura.value^2));
+    console.log(imc);
+    console.log(peso.value);
+    console.log(altura.value);
   
     if (imc < 18.5) {
         resultado.innerHTML = "Abaixo do peso!";
